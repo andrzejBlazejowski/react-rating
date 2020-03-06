@@ -11,7 +11,6 @@ import React from "react";
 import { GiLoveMystery } from "react-icons/gi";
 import Rating from 'ab-react-rating';
 
-
 function App() {
   return (
     <Rating theme="redText">
@@ -78,18 +77,18 @@ determine if user will be able to change value of component
 
 #### `theme`
 set theme of component. available themes:
-* blue - base color: #6ea1ff, activeColor: #2857ad
-* gold - base color: #fac552, activeColor: #ad7e17
-* aqua - base color: #e0fffa, activeColor: #4a8077
-* red - base color: #cca9a3, activeColor: #d5523e
-* green - base color: #c9fbd1, activeColor: #63c773
-* yellow - base color: #fbf1a8, activeColor: #c7a32f
-* blueText - text base color: #6ea1ff, active text color: #2857ad
-* goldText - text base color: #fac552, active text color: #ad7e17
-* aquaText - text base color: #e0fffa, active text color: #4a8077
-* redText - text base color: #cca9a3, active text color: #d5523e
-* greenText - text base color: #c9fbd1, active text color: #63c773
-* yellowText - text base color: #fbf1a8, active text color: #c7a32f
+* blue - base color: `#6ea1ff`, active color: `#2857ad`
+* gold - base color: `#fac552`, active color: `#ad7e17`
+* aqua - base color: `#e0fffa`, active color: `#4a8077`
+* red - base color: `#cca9a3`, active color: `#d5523e`
+* green - base color: `#c9fbd1`, active color: `#63c773`
+* yellow - base color: `#fbf1a8`, active color: `#c7a32f`
+* blueText - text base color: `#6ea1ff`, active text color: `#2857ad`
+* goldText - text base color: `#fac552`, active text color: `#ad7e17`
+* aquaText - text base color: `#e0fffa`, active text color: `#4a8077`
+* redText - text base color: `#cca9a3`, active text color: `#d5523e`
+* greenText - text base color: `#c9fbd1`, active text color: `#63c773`
+* yellowText - text base color: `#fbf1a8`, active text color: `#c7a32f`
 ###### type: string
 ###### default: gold
 ###### usage:
