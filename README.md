@@ -1,69 +1,82 @@
 # React Rating Component
 
-install: 
+### install: 
 ```
 npm install ab-react-rating
 ```
 
-basic example:
-```
+### basic example:
+```javascript
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
+import { GiLoveMystery } from "react-icons/gi";
 import Rating from 'ab-react-rating';
 
 
 function App() {
-  const [rate, setRate] = useState(3);
-  let containerStyles = {
-    width: "20px",
-    height: "20px"
-  };
-  let containerActiveStyles = {
-    width: "20px",
-    height: "20px"
-  };
-  let itemStyles = {
-    color: "#61FFD0",
-    background: "#20B387"
-  };
-  let itemActiveStyles = {
-    color: "#FF977A",
-    background: "#B34E32"
-  };
-
-  const rateChanged = value => {
-    setRate(value);
-  };
-
   return (
     <Rating theme="redText">
       <GiLoveMystery />
     </Rating>
   );
 }
-
 ```
 
-docs:
-# `value`
+### docs:
+#### `value`
 alow to set initial value for rating Component
-type: number
-# `minValue`
+###### type: number
+###### default: 0
+###### usage:
+```javascript
+<Rating value=2/>
+```
+
+#### `minValue`
 alow to set minimal value for rating Component
-type: number
-# `maxValue`
+###### type: number
+###### default: 0
+###### usage:
+```javascript
+<Rating minValue=2/>
+```
+
+#### `maxValue`
 alow to set max value for rating Component
-type: number
-# `changed`
+###### type: number
+###### default: 5
+###### usage:
+```javascript
+<Rating maxValue=6/>
+```
+
+#### `changed`
 this callback will be called on value change rating Component
-type: function
-# `allowUnselect`
+###### type: function
+###### default: undefined
+###### usage:
+```javascript
+<Rating changed={(val)=>{console.log(val)}}/>
+```
+
+#### `allowUnselect`
 determine if user will be able to unselect value of component
-type: bool
-# `readOnly`
+###### type: bool
+###### default: true
+###### usage:
+```javascript
+<Rating allowUnselect=false/>
+```
+
+#### `readOnly`
 determine if user will be able to change value of component
-type: bool
-# `theme`
+###### type: bool
+###### default: false
+###### usage:
+```javascript
+<Rating readOnly=true/>
+```
+
+#### `theme`
 set theme of component. available themes:
 * blue - base color: #6ea1ff, activeColor: #2857ad
 * gold - base color: #fac552, activeColor: #ad7e17
@@ -71,22 +84,86 @@ set theme of component. available themes:
 * red - base color: #cca9a3, activeColor: #d5523e
 * green - base color: #c9fbd1, activeColor: #63c773
 * yellow - base color: #fbf1a8, activeColor: #c7a32f
-type: string
-# `itemClass`
+* blueText - text base color: #6ea1ff, active text color: #2857ad
+* goldText - text base color: #fac552, active text color: #ad7e17
+* aquaText - text base color: #e0fffa, active text color: #4a8077
+* redText - text base color: #cca9a3, active text color: #d5523e
+* greenText - text base color: #c9fbd1, active text color: #63c773
+* yellowText - text base color: #fbf1a8, active text color: #c7a32f
+###### type: string
+###### default: gold
+###### usage:
+```javascript
+<Rating theme="red"/>
+```
+
+#### `itemClass`
 set item class to passed value
-type: string
-# `itemActiveClass`
+###### type: string
+###### default: rating__item
+###### usage:
+```javascript
+<Rating itemClass="itemClass" itemActiveClass="activeItemClass"/>
+```
+
+#### `itemActiveClass`
 set active item class to passed value
-type: string
-# `itemStyles`
+###### type: string
+###### default: rating__item--active
+###### usage:
+```javascript
+<Rating itemClass="itemClass" itemActiveClass="activeItemClass"/>
+```
+
+#### `itemStyles`
 set item inline styles to passed value
-type: object
-# `itemActiveStyles`
+###### type: object
+###### default: {}
+###### usage:
+```javascript
+<Rating 
+  itemStyles={{ color: "#61FFD0", background: "#20B387"}}
+  itemActiveStyles={{color: "#FF977A", background: "#B34E32"}}
+  />
+```
+
+#### `itemActiveStyles`
 set active item inline styles to passed value
-type: object
-# `containerStyles`
+###### type: object
+###### default: {}
+###### usage:
+```javascript
+<Rating 
+  itemStyles={{ color: "#61FFD0", background: "#20B387"}}
+  itemActiveStyles={{color: "#FF977A", background: "#B34E32"}}
+  />
+```
+
+#### `containerStyles`
 set item container inline styles to passed value
-type: object
-# `containerActiveStyles`
+###### type: object
+###### default: {}
+###### usage:
+```javascript
+<Rating 
+  containerStyles={{ width: "20px", height: "20px"}}
+  containerActiveStyles={{width: "20px", height: "20px"}}
+  />
+```
+
+#### `containerActiveStyles`
 set active item container inline styles to passed value
-type: object
+###### type: object
+###### default: {}
+###### usage:
+```javascript
+<Rating 
+  containerStyles={{ width: "20px", height: "20px"}}
+  containerActiveStyles={{width: "20px", height: "20px"}}
+  />
+```
+
+### to do:
+- [ ] allow to mark half of values
+- [ ] add more themes
+- [ ] add default icons/ marks ?
