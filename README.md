@@ -8,12 +8,29 @@ npm install ab-react-rating
 ### basic example:
 ```javascript
 import React from "react";
+import Rating from 'ab-react-rating';
+
+function App() {
+  return (
+    <Rating />
+  );
+}
+```
+
+### example:
+```javascript
+import React from "react";
 import { GiLoveMystery } from "react-icons/gi";
 import Rating from 'ab-react-rating';
 
 function App() {
   return (
-    <Rating theme="redText">
+    <Rating 
+      value={3}
+      minValue={1}
+      maxValue={6}
+      changed={(val)=>{console.log(val)}}
+      theme="redText">
       <GiLoveMystery />
     </Rating>
   );
@@ -21,13 +38,24 @@ function App() {
 ```
 
 ### docs:
+#### `children`
+if passed children will be displayed as rate symbol
+###### type: string / instanceof React.Component / React.isValidElement
+###### default: undefined
+###### usage:
+```javascript
+<Rating theme="redText">
+  <GiLoveMystery />
+</Rating>
+```
+
 #### `value`
 alow to set initial value for rating Component
 ###### type: number
 ###### default: 0
 ###### usage:
 ```javascript
-<Rating value=2/>
+<Rating value={2}/>
 ```
 
 #### `minValue`
@@ -36,7 +64,7 @@ alow to set minimal value for rating Component
 ###### default: 0
 ###### usage:
 ```javascript
-<Rating minValue=2/>
+<Rating minValue={2}/>
 ```
 
 #### `maxValue`
@@ -45,7 +73,7 @@ alow to set max value for rating Component
 ###### default: 5
 ###### usage:
 ```javascript
-<Rating maxValue=6/>
+<Rating maxValue={6}/>
 ```
 
 #### `changed`
@@ -63,7 +91,7 @@ determine if user will be able to unselect value of component
 ###### default: true
 ###### usage:
 ```javascript
-<Rating allowUnselect=false/>
+<Rating allowUnselect={false}/>
 ```
 
 #### `readOnly`
@@ -72,7 +100,7 @@ determine if user will be able to change value of component
 ###### default: false
 ###### usage:
 ```javascript
-<Rating readOnly=true/>
+<Rating readOnly={true}/>
 ```
 
 #### `theme`
