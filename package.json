@@ -4,6 +4,15 @@
     "description": "Reactrating component",
     "main": "./lib/Rating.js",
     "license": "MIT",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/andrzejBlazejowski/react-rating"
+    },
+    "keywords":[
+        "rating",
+        "rate",
+        "react-component"
+    ],
     "scripts": {
         "build": "webpack"
     },
